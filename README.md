@@ -1,68 +1,109 @@
 # BE Staff Filter App
 
-## Project Background
+## Project Overview
 
-This repository was created as part of a backend development task.
+I developed this Django application as part of a backend development task.
 
-The goal of the task was to develop a Django web application that manages employee data and provides a filtering functionality to search and display employees based on specific criteria.
+The goal of the task was to create an application that manages employee data and provides a filtering functionality to search and display employee records based on specific criteria.
 
-The repository documents the development process and the implemented solution.
+In this project, I implemented the data structure, backend logic, filtering functionality, and the connection between the Django backend and the user interface.
 
-## Task Description
+---
 
-The objective was to create a Django application with the following requirements:
+## Task Requirements
 
-- Create a structured data model for employees
-- Store and manage employee information
-- Display employee data in a web interface
-- Implement a filtering mechanism for employee searches
-- Provide a clear and user-friendly presentation of the results
+For this task, I implemented the following requirements:
 
-## Development Approach
+- I created a structured employee data model.
+- I implemented the storage and management of employee information.
+- I developed a web interface to display employee records.
+- I added filtering functionality to search employee data.
+- I created a clear presentation of the filtered results.
 
-### 1. Project Setup
+---
 
-A Django project was created and configured as the foundation of the application.
+## My Implementation
 
-The required application structure was prepared, including:
+### Project Setup
+
+I created and configured the Django project structure as the foundation of the application.
+
+I prepared the required components, including:
 
 - Django project configuration
 - Application setup
 - Database configuration
+- URL routing
+- Template integration
 
-### 2. Data Model Implementation
+---
 
-A data model was created to represent employee information.
+### Data Model
 
-The model defines the required fields and provides the foundation for storing and retrieving employee data.
+I created an employee model to represent the required employee information.
 
-### 3. Backend Development
+With this model, I implemented the database structure needed to store and retrieve employee records using Django's ORM.
 
-The backend logic was implemented using Django.
+I created and applied migrations to connect the model with the database.
+
+---
+
+### Backend Development
+
+I implemented the backend logic using Django.
 
 This includes:
 
-- Database queries
-- Data processing
-- Employee filtering functionality
-- Communication between backend logic and templates
+- Retrieving employee data from the database
+- Processing user requests
+- Implementing the filtering functionality
+- Connecting backend logic with the templates
 
-### 4. User Interface
+---
 
-A web interface was created to display employee data and provide filtering options.
+### User Interface
 
-Users can view employee records and filter the displayed results according to the implemented criteria.
+I created the user interface to display employee information and provide the filtering options.
 
-### 5. Testing
+Users can view employee records and filter the displayed results based on the implemented criteria.
 
-The application was tested locally to verify that:
+---
 
-- Employee data is displayed correctly
-- Filtering works as intended
-- The application runs successfully
+## Testing
+
+I tested the application locally to verify that:
+
+- The Django project starts correctly.
+- Employee data is displayed correctly.
+- Database operations work as expected.
+- The filtering functionality returns the correct results.
+
+---
+
+## Running the Project
+
+Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Apply database migrations:
+
+```bash
+python manage.py migrate
+```
+
+Start the development server:
+
+```bash
+python manage.py runserver
+```
+
+---
 
 ## Result
 
-The result is a functional Django web application for managing and filtering employee data.
+I created a functional Django web application that allows employee data to be managed and filtered.
 
-This repository contains the complete implementation of the backend task and documents the development process.
+This repository contains my complete implementation of the backend task, including the project structure, database model, backend logic, and user interface integration.
