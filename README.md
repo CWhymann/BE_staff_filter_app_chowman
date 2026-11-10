@@ -1,5 +1,60 @@
 # BE Staff Filter App
 
+## Quick Start
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+cd BE_staff_filter_app
+```
+
+Create a virtual environment:
+
+```bash
+python -m venv .venv
+```
+
+Activate the virtual environment:
+
+**Windows**
+
+```bash
+.venv\Scripts\activate
+```
+
+**macOS / Linux**
+
+```bash
+source .venv/bin/activate
+```
+
+Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Apply the database migrations:
+
+```bash
+python manage.py migrate
+```
+
+Start the development server:
+
+```bash
+python manage.py runserver
+```
+
+Open your browser and navigate to:
+
+```text
+http://127.0.0.1:8000/
+```
+
+---
+
 ## Project Overview
 
 I developed this Django application as part of a backend development task.
@@ -77,28 +132,6 @@ I tested the application locally to verify that:
 - Employee data is displayed correctly.
 - Database operations work as expected.
 - The filtering functionality returns the correct results.
-
----
-
-## Running the Project
-
-Install the required dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Apply database migrations:
-
-```bash
-python manage.py migrate
-```
-
-Start the development server:
-
-```bash
-python manage.py runserver
-```
 
 ---
 
