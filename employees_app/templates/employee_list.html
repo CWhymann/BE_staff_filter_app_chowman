@@ -1,27 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Staff Filter App</title>
   </head>
+
   <body>
     <h1>Staff Filter App</h1>
 
-    <h2>Aufgaben:</h2>
-    <ol>
-      <li>Zeige hier im Template eine Liste aller Mitarbeiter, ihrer Abteilung und ihres Gehalts an.</li>
-      <li>Zeige eine Liste der Namen aller Mitarbeiter, die mehr als 3000 € im Monat verdienen.</li>
-      <li>Wie hoch ist die Anzahl der Mitarbeiter, die 5000 € im Monat oder mehr verdienen?</li>
-    </ol>
-    <h3>Zusatzaufgaben:</h3>
-    <ol start="4">
-      <li>Wie hoch ist das Durchschnittsgehalt aller Mitarbeiter im Sales-Team? Zeige das Ergebnis auf zwei Nachkommastellen gerundet an.</li>
-      <li>Welche Mitarbeiter wurden vor dem 1. Januar 2022 eingestellt und gehören NICHT zur Abteilung HR?</li>
-    </ol>
+    <h2>1. Alle Mitarbeiter</h2>
 
-    <h2 style="color:red">Antworten:</h2>
+    <table border="1">
+      <tr>
+        <th>Name</th>
+        <th>Abteilung</th>
+        <th>Gehalt</th>
+      </tr>
 
-    <!-- Hier eure Antworten rendern -->
+      {% for employee in employees %}
+      <tr>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.department.name }}</td>
+        <td>{{ employee.salary }} €</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h2>2. Mitarbeiter mit mehr als 3000 € Gehalt</h2>
+
+    <ul>
+      {% for employee in high_salary_employees %}
+      <li>{{ employee.name }}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>3. Anzahl Mitarbeiter mit 5000 € oder mehr Gehalt</h2>
+
+    <p>{{ count_high_salary }} Mitarbeiter</p>
+
+    <h2>4. Durchschnittsgehalt Sales-Team</h2>
+
+    <p>{{ average_sales_salary|floatformat:2 }} €</p>
+
+    <h2>5. Mitarbeiter vor dem 01.01.2022 und nicht HR</h2>
+
+    <ul>
+      {% for employee in old_non_hr_employees %}
+      <li>{{ employee.name }} - {{ employee.department.name }}</li>
+      {% endfor %}
+    </ul>
   </body>
 </html>
